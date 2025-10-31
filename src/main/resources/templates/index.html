@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.springframework.org/security/tags">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.springframework.org/security/tags">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,9 +7,9 @@
 <body>
     <h1 th:text="${message}"></h1>
     <div sec:authorize="isAuthenticated()">
-        こんにちは、<span sec:authentication="name">ユーザ名</span>さん
-<!--        <span sec:authentication="authorities"></span>-->
-<!--        <span sec:authentication="principal"></span>-->
+        <span sec:authentication="name"></span>
+        <span sec:authentication="authorities"></span>
+        <span sec:authentication="principal"></span>
     </div>
 </body>
 </html>
